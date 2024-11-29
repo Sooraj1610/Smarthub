@@ -1,0 +1,109 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos do menu */
+nav {
+    background: #ff5722;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background: #ce451c;
+}
+
+/* Seção de perfil */
+.edit-profile-section {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+
+/* Estilos do formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ff5722;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #ff5722;
+    outline: none;
+}
+
+/* Botões */
+.btn-submit, .btn-cancel {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-submit {
+    background: #28a745;
+}
+
+.btn-cancel {
+    background: #dc3545;
+}
+
+.btn-submit:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-cancel:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Mensagens de erro */
+.error-message {
+    color: #dc3545;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}

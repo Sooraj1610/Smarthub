@@ -1,0 +1,264 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color: #6c5ce7;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(purple,var(--color));
+    color: #0b0a0a;
+    padding: 1.5em 0;
+    width: 100%;
+    text-align: center;
+    position: relative; /* Removido sticky para que não siga o scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Section Separator */
+.section-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    background: #f0f0f0;
+}
+
+.section-separator i {
+    font-size: 3.5rem;
+    color: #ff3300;
+    margin-right: 20px;
+}
+
+.section-title-large {
+    font-size: 3rem;
+}
+
+/* Products Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    max-width: 100%;
+    border-bottom: 2px solid #ddd;
+}
+
+.card h3 {
+    margin: 20px 0;
+    font-size: 2rem;
+}
+
+.card p {
+    color: #ff3300;
+    font-size: 1.8rem;
+}
+
+.btn {
+    background: #ff3300;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    background: #cc2900;
+}
+
+/* FAQ Section */
+.faq-item {
+    margin: 30px 0;
+}
+
+.faq-item h3 {
+    font-size: 1.8rem;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 60px;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+/* Video Banner Section */
+.video-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* A altura vai ocupar toda a altura da viewport */
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Mantém o vídeo com proporção de aspecto e ocupa o container */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adiciona uma camada escura transparente sobre o vídeo */
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.video-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.video-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.video-content .btn {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .video-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .video-content p {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .section-title-large {
+        font-size: 2.5rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-large {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
